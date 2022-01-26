@@ -1,0 +1,17 @@
+{
+  "name": "weathernody",
+  "version": "1.0.0",
+  "description": "craeting weather app",
+  "main": "index.js",
+  "scripts": {
+   "nodemon":"nodemon index.js"
+  },
+  "author": "Sharanya",
+  "license": "ISC",
+  "dependencies": {
+    "requests": "^0.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
