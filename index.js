@@ -16,10 +16,10 @@ const server = http.createServer((req, res) => {
     if (req.url == "/") {
         requests('api.openweathermap.org/data/2.5/weather?q=Lucknow&appid=1ef2dcd7e5c171bab25e3d64965bc8c8')
             .on('data', (chunk) => {
-                const objdata=JSON.parse(chunk);
-                const arrData=[objdata];
+                const objdata = JSON.parse(chunk);
+                const arrData = [objdata];
                 // console.log(arrData[0].main.temp);
-                const realTimeData = arrData.map((val)=> replaceVal(homefile,val) ).join("");
+                const realTimeData = arrData.map((val) => replaceVal(homefile, val)).join("");
                 res.write(realTimeData);
                 // console.log(chunk);
             })
